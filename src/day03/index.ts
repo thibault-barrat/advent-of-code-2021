@@ -12,24 +12,6 @@ const part1 = (rawInput: string) => {
     gamma += input.filter(row => row.charAt(i) === '1').length >= input.length / 2 ? '1' : '0';
     epsilon += input.filter(row => row.charAt(i) === '0').length >= input.length / 2 ? '1' : '0';
   }
-
-
-  // const bitArray = input.reduce(
-  //   (acc, current) => {
-  //     for (let i = 0; i < current.length; i++) {
-  //       acc[i] = acc[i] ? acc[i] + current.charAt(i) : current.charAt(i);
-  //     }
-  //     return acc;
-  //   }, [] as string[]);
-
-  // const [gamma, epsilon] = bitArray.reduce(
-  //   (acc, current) => {
-  //     acc[0] = acc[0] + (current.split('0').length - 1 > current.split('1').length - 1 ? '0' : '1');
-  //     acc[1] = acc[1] + (current.split('0').length - 1 > current.split('1').length - 1 ? '1' : '0');
-  //     return acc;
-  //   },
-  //   ['', '']
-  // );
   
   return parseInt(gamma, 2) * parseInt(epsilon, 2);
 };
